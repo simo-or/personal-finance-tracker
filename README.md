@@ -1,66 +1,64 @@
 # Personal Finance Tracker
 
-A personal Python project for tracking stock investments and monitoring portfolio performance using live market data.
+A Python command-line application for tracking a personal stock portfolio — pulls live market prices, calculates profit/loss, and visualizes portfolio allocation and performance.
 
 ## Features
 
-- Add stocks to a portfolio
-- Remove stocks from the portfolio
-- View current stock prices
-- Calculate profit or loss for each investment
-- Display the overall portfolio performance
-- Portfolio allocation pie chart
-- Portfolio performance chart
+- **Live stock prices** via the `yfinance` API
+- **Portfolio management** — add and remove holdings
+- **Profit/Loss tracking** for each position
+- **Data visualization** — portfolio allocation (pie chart) and performance by stock (bar chart), built with `matplotlib`
+- **CSV-based storage** for portfolio data
 
-## Built With
+## Screenshots
 
-- Python
-- yfinance
-- pandas
-- matplotlib
-- CSV
+**Portfolio Allocation**
+
+![Portfolio Allocation](screenshots/portfolio_allocation.png)
+
+**Portfolio Performance**
+
+![Portfolio Performance](screenshots/portfolio_performance.png)
+
+## Tech Stack
+
+`Python` · `pandas` · `yfinance` · `matplotlib`
 
 ## Getting Started
 
-Clone the repository:
+### Prerequisites
+
+- Python 3.9+
+
+### Installation
 
 ```bash
+# Clone the repo
 git clone https://github.com/simo-or/personal-finance-tracker.git
-```
+cd personal-finance-tracker
 
-Install the required packages:
+# (Recommended) create a virtual environment
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-Run the project:
+### Usage
 
 ```bash
 python main.py
 ```
 
-## Project Structure
+Follow the on-screen menu to add stocks to your portfolio, view profit/loss, and generate charts.
 
-```
-personal-finance-tracker/
-│
-├── main.py
-├── menu.py
-├── portfolio.py
-├── stock_info.py
-├── charts.py
-├── requirements.txt
-└── .gitignore
-```
+## Roadmap
 
-## Future Plans
+- [ ] Migrate storage from CSV to SQLite
+- [ ] Add unit tests for portfolio calculations
+- [ ] Add historical performance tracking over time
 
-- Build a graphical interface with CustomTkinter
-- Store data in SQLite instead of CSV
-- Add portfolio history and performance over time
-- Export reports to Excel or PDF
+## License
 
-## About
-
-This project was created as a way to practice Python while building something useful. It combines file handling, APIs, data analysis, and data visualization in a single application.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
